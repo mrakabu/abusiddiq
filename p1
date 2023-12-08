@@ -1,0 +1,848 @@
+SlNo	  Name of Experiments
+HTML-FORMS
+1	Design and create a webpage user login-form
+
+2	Design and create a webpage user Registration-form
+
+3	Design and create a webpage user Application-form
+
+4	Design and create webpage sign-up forms.
+
+5	Design and create webpage feedback-forms.
+
+HTML-WITH -CSS
+6.	Design and create webpage using HTMLwith CSS
+
+7	Design and create webpage Table with heading and data using HTML with CSS
+
+HTML With  JAVA  VALIDATION FORMS
+8	Design and create a web-page is login-form with validation.
+9	Design and create a web-page is  form with validation
+10	Design and create a web-page is registration form with validation
+	
+	
+                              FSD LAB-PROGRAMMING
+
+
+
+
+
+
+
+
+
+1. Design and create a webpage user login-form.
+Program name : Login.html
+<html>  
+<head>  
+<title> Login Form</title>  
+</head>  
+<body bgcolor=”blue”>
+<form>  
+<h13><center> LOGIN FORM </center></h1>  
+<hr><br><br><center>
+ USERNAME :  
+<input type="text" placeholder="Enter your email id"/> <br><br>
+ PASSWORD :  
+<input type="password" placeholder="Enter your password"/><br><br>  
+<input type="submit" value="Login" onClick="submit_form()"/>  
+<input type="button" value="SignUp" onClick="create()"/>  
+</center>
+</form>  
+</body>  
+</html>  
+Output:
+ 
+2. Design and create a webpage user Registration-form.
+Program Name : Registration.html
+<html>
+<head>
+ <title>Registration</title>
+ </head>
+ <body bgcolor=lightblue>
+<form>
+ <h1 align=center><u>Registration Form</u></h1>
+ <br><br><center>
+ <hr color="blue"><br><br>
+ First Name : <input type=text value=" " name="txt1"><br><br>
+ Last Name : <input type=text value=" " name="txt2"><br><br>
+ E-mail : <input type=text value="" name="txt3"><br><br>
+ Password : <input type=password value="" name="pwd1"><br><br>
+ Confirm Password : <input type=password value="" name="pwd2"><br><br>
+ Address :
+ <textarea rows=3 cols=60></textarea><br><br>
+ Date of Birth :<br>
+ dd  <select name="sel1">
+ <option>--</option>
+ <option>01</option>
+ <option>02</option>
+ <option>03</option>
+ <option>04</option>
+ <option>05</option>
+ <option>27</option>
+ <option>28</option>
+ <option>29</option>
+ <option>30</option>
+ <option>31</option>
+ </select><br>
+mm  <select name="sel2">
+ <option>--</option>
+ <option>01</option>
+ <option>02</option>
+ <option>03</option>
+ <option>04</option>
+ <option>05</option>
+ <option>06</option>
+ <option>07</option>
+ <option>08</option>
+ <option>09</option>
+ <option>10</option>
+ <option>11</option>
+ <option>12</option>
+ </select><br>
+ yyyy  <select name="sel3">
+ <option>----</option>
+ <option>1987</option>
+ <option>1988</option>
+ <option>1989</option>
+ <option>1990</option>
+ <option>1991</option>
+ <option>1992</option>
+ <option>1993</option>
+ <option>1994</option>
+ <option>1995</option>
+ <option>1996</option>
+ <option>1997</option>
+ <option>1998</option>
+ <option>1999</option>
+ <option>2000</option>
+ <option>2001</option>
+ <option>2002</option>
+ <option>2003</option>
+ <option>2004</option>
+ <option>2005</option>
+ <option>2006</option>
+ <option>2007</option>
+ <option>2008</option>
+ <option>2009</option>
+ <option>2010</option>
+  </select><br><br>
+ Sex :
+ <input name="rb1" type="radio" value="radiobutton">Male
+ <input name="rb1" type="radio" value="radiobutton">Female
+ <br><br>
+ Martial Status :
+ <input name="rb2" type="radio" value="radiobutton">Single
+ <input name="rb2" type="radio" value="radiobutton">Married
+ <br><br>
+ Mobile Number : <input type=text name="txt4"><br><br>
+ Branch :
+ <input name="rb3" type="radio" value="radiobutton">CSE
+<input name="rb3" type="radio" value="radiobutton">IT<br><br>
+ <input name="rb3" type="radio" value="radiobutton">ECE
+ <input name="rb3" type="radio" value="radiobutton">EEE<br><br>
+ <input name="rb3" type="radio" value="radiobutton">MECH
+ <br><br>
+ Languages Known &nbsp
+ <input name="cb1" type="checkbox" value="checkbox">English
+ <input name="cb1" type="checkbox" value="checkbox">Telugu<br><br>
+ <input name="cb1" type="checkbox" value="checkbox">Hindi
+ <input name="cb1" type="checkbox" value="checkbox">Kannada<br><br>
+ <input name="cb1" type="checkbox" value="checkbox">Tamil
+ <br><br>
+  <input type=submit value="SUBMIT" name="btn1"><br><br>
+ <input type=reset value="RESET" name="btn1">
+ </center>
+</form>
+</body>
+</html>
+
+Ouput:
+
+ 
+3. Design and create a webpage user Application-form
+Program Name :Application.html
+<html>
+<head>
+               <title>  Application</title>
+</head>
+<body bgcolor="lightgreen">
+
+<form>
+<h1> APPLICATION FORM</h1>
+
+User id :
+<input type="text" name="userid" size="12" /><br><br>
+
+Password : 
+<input type="password" name="passid" size="12" /><br><br>
+
+Name :
+<input type="text" name="username" size="50" /><br><br>
+
+Address :
+<input type="text" name="address" size="50" /><br><br>
+
+ZIP Code :
+<input type="text" name="zip" /><br><br>
+
+Email :
+<input type="text" name="email" size="50" /><br><br>
+
+Sex :
+<input type="radio" name="msex" value="Male" /> Male
+<input type="radio" name="fsex" value="Female" /> Female<br><br>
+
+Language preference :
+<input type="checkbox" name="en" value="en" checked />English
+<input type="checkbox" name="nonen" value="noen" />Non English <br><br>
+
+Write about yourself : <br>
+(optional)
+<textarea name="desc" rows="4" cols="40"></textarea><br><br>
+<input type="submit" name="submit" value="Submit" />
+</form>
+
+</body>  </html>
+
+
+
+Output:
+
+ 
+
+
+
+
+
+
+
+
+
+4. Design and create webpage sign-up forms.
+Program Name: Sign-up.html
+<html>  
+<head>  
+            <title> SignUp Page</title>  
+</head>  
+<body align="center" >  
+<h1> CREATE YOUR ACCOUNT</h1>  
+<hr>
+<font color="pink">
+ Name :   
+<input type="text" placeholder="Enter your name" id="n1"><br><br>  
+Email :  
+<input type="text" placeholder="Enter your email id" id="e1"><br><br>  
+ Set Password :  
+<input type="password" placeholder="Set a password" id="p1"><br><br>  
+Confirm Password :  
+<input type="password" placeholder="Confirm your password" id="p2"><br><br>  
+Name :   
+<input type="text" placeholder="Enter your name" id="n1"><br><br>  
+Date of Birth :<br>
+ dd  <select name="sel1">
+ <option>--</option>
+ <option>01</option>
+ <option>02</option>
+ <option>03</option>
+ 
+<option>29</option>
+ <option>30</option>
+ <option>31</option>
+ </select><br>
+mm  <select name="sel2">
+ <option>--</option>
+ <option>01</option>
+ <option>02</option>
+  <option>11</option>
+ <option>12</option>
+ </select><br>
+ yyyy  <select name="sel3">
+ <option>----</option>
+ <option>1987</option>
+ <option>1988</option>
+  <option>2022</option>
+ <option>2023</option>
+  </select><br><br>
+Sex :
+<input type="radio" name="msex" value="Male" /> Male
+<input type="radio" name="fsex" value="Female" /> Female<br><br>
+Language preference :
+<input type="checkbox" name="en" value="en" checked />English
+<input type="checkbox" name="nonen" value="noen" />Non English <br><br>
+ <input type="submit" value="Create" onClick="create_account()"/>  
+</body>  
+</html>  
+
+
+output:
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+5. Design and create a webpage feedback-forms.
+Program Name : Feedback.html
+<html>    
+<head>    
+<title> feedback form</title>
+</head>    
+<body>    
+<h2>FEED BACK FORM</h2>    
+  <form>    
+    First Name:    
+      <input type="text"  name="firstname" placeholder="Your name.."><br><br>    
+   Last Name:    
+   <input type="text"  name="lastname" placeholder="Your last name.."><br><br>     
+     E-Mail Id :    
+  <input type="email"  name="mailid" placeholder="Your mail id.."><br><br>     
+          
+     Country :  
+        <select  name="country">    
+            <option>Select Country</option>    
+          <option>Australia</option>    
+          <option>Canada</option>    
+          <option>USA</option>    
+          <option>Russia</option>    
+          <option>Japan</option>    
+          <option>India</option>    
+          <option>China</option>    
+        </select><br><br>     
+      
+    Feed Back :   
+   <textarea  row=”5”  cols=”50” placeholder="Write something.." "></textarea><br><br>     
+       
+    <input type="submit" value="Submit">    
+   </form>    
+    </body>    
+</html>
+
+
+
+
+
+
+Output:
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6. Design and create webpage using HTML with CSS
+Program Name : progcss.html
+<html>  
+<head>  
+<title> CSS border-radius </title>  
+<style>  
+div {  
+padding: 50px;  
+margin: 20px;  
+border: 6px ridge red;  
+width: 300px;  
+float: left;  
+height: 150px;  
+}  
+p{  
+font-size: 25px;  
+}  
+#one {  
+border-radius: 90px;  
+background: lightgreen;  
+}  
+#two {  
+border-radius: 25% 10%;  
+background: orange;  
+}  
+#three {  
+border-radius: 35px 10em 10%;  
+background: cyan;  
+}  
+#four {  
+border-radius: 50px 50% 50cm 50em;  
+background: lightblue;  
+}  
+  </style>  
+</head>  
+  <body>  
+<div id = "one">  
+<h2> Welcome to the java </h2>  
+<p> border-radius: 90px; </p>  
+</div>  
+<div id = "two">  
+<h2> Welcome to the H.M.S </h2>  
+<p> border-radius: 25% 10%; </p>  
+</div>  
+<div id = "three">  
+<h2> Welcome to the h.m.s polytechnic </h2>  
+<p> border-radius: 35px 10em 10%; </p>  
+</div>  
+<div id = "four">  
+<h2>Welcome to the Tumkur</h2>  
+<p>border-radius: 50px 50% 50cm 50em;</p>  
+</div>  
+</body>  
+</html>  
+
+
+Output:
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+7. Design and create webpage Table with heading and data using HTML with CSS
+Program Name: progcss2.html
+<html>  
+  <head>  
+<title> border-collapse property </title>  
+<style>  
+table{  
+border: 2px solid blue;  
+text-align: center;  
+font-size: 20px;  
+width: 80%;  
+height: 50%;  
+}  
+th{  
+border: 5px solid red;  
+background-color: yellow;  
+}  
+td{  
+border: 5px solid violet;  
+background-color: cyan;  
+}  
+#t1 {  
+border-collapse: separate;  
+}  
+</style>  
+</head>  
+  <body>  
+  
+<h1> The border-collapse Property </h1>  
+<h2> border-collapse: separate; </h2>  
+<table id = "t1">  
+<tr>  
+<th> First_Name </th>  
+<th> Last_Name </th>  
+<th> Subject </th>  
+<th> Marks </th>  
+</tr>  
+<tr>  
+<td> James </td>  
+<td> Gosling </td>  
+<td> Maths </td>  
+<td> 92 </td>  
+</tr>  
+<tr>  
+<td> Alan </td>  
+<td> Rickman </td>  
+<td> Maths </td>  
+<td> 89 </td>  
+</tr>  
+<tr>  
+<td> Sam </td>  
+<td> Mendes </td>  
+<td> Maths </td>  
+<td> 82 </td>  
+</tr>  
+</table>  
+</body>  
+  </html>  
+Output:
+
+ 
+
+
+
+
+
+
+8.Design and create a web-page is  login-form with validation.
+Program Name:logjas.html
+<html>
+  <head>
+  <title>Welcome To Login Form</title>
+<script>
+ function login()	{ 
+  	var uname = document.getElementById("email").value;
+	var pwd = document.getElementById("pwd1").value;
+var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		if(uname =='')
+		{
+			alert("please enter user name.");
+		}
+		else if(pwd=='')
+		{
+        	alert("enter the password");
+		}
+		else if(!filter.test(uname))
+		{
+			alert("Enter valid email id.");
+		}
+		else if(pwd.length < 6 || pwd.length > 6)
+		{
+			alert("Password min and max length is 6.");
+		}
+		else
+		{
+	alert('Thank You for Login ');
+       		}
+	}
+	//Reset Inputfield code.
+	function clearFunc()
+	{
+		document.getElementById("email").value="";
+		document.getElementById("pwd1").value="";
+	}	
+</script>
+  </head>
+	<body>
+	<!-- Main div code -->
+	<div id="main">
+	<div class="h-tag">
+	<h2><center>Welcome To My Account Login</center></h2>
+	</div>
+	<!-- Login box -->
+	<div class="login">
+	<table cellspacing="2" align="center" cellpadding="8" border="0">
+	<tr>
+	<td>Enter User Name :</td>
+	<td><input type="text" placeholder="Enter user name here" id="email" class="tb" /></td>
+	</tr>
+	<tr>
+	<td>Enter Password :</td>
+	<td><input type="password" placeholder="Enter Password here"
+                         id="pwd1" class="tb" /></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td>
+	<input type="submit" value="Reset" onclick="clearFunc()" class="btn" />
+	<input type="submit" value="Login" class="btn" onClick="login()" /></td>
+	</tr>
+	</table>
+	</div>
+  	 <!-- login box div ending here.. -->
+	</div>
+	<!-- Main div ending here... -->
+      </body>
+  </html>
+Output:
+ 
+
+ 
+
+
+
+9. Design and create a web-page is  form with validation
+File name: form1.html
+<html>   
+   <head>
+      <title>Form Validation</title>      
+      <script type = "text/javascript" src="form1.js">
+            </script>      
+   </head>
+      <body>
+      <form  name = "myForm" onsubmit = "return(validate());">
+         <table cellspacing = "2" cellpadding = "2" border = "1">
+                        <tr>
+               <td align = "right">Name</td>
+               <td><input type = "text" name = "Name" /></td>
+            </tr>
+                        <tr>
+               <td align = "right">EMail</td>
+               <td><input type = "text" name = "EMail" /></td>
+            </tr>
+                        <tr>
+               <td align = "right">Zip Code</td>
+               <td><input type = "text" name = "Zip" /></td>
+            </tr>
+                        <tr>
+               <td align = "right">Country</td>
+               <td>
+                  <select name = "Country">
+                     <option value = "-1" selected>[choose yours]</option>
+                     <option value = "1">USA</option>
+                     <option value = "2">UK</option>
+                     <option value = "3">INDIA</option>
+                  </select>
+               </td>
+            </tr>
+                        <tr>
+               <td align = "right"></td>
+               <td><input type = "submit" value = "Submit" /></td>
+            </tr>
+                     </table>
+      </form>      
+   </body>
+</html>
+File name: form1.js
+// Form validation code will come here.
+      function validate() {
+               if( document.myForm.Name.value == "" ) {
+            alert( "Please provide your name!" );
+            document.myForm.Name.focus() ;
+            return false;
+         }
+         if( document.myForm.EMail.value == "" ) {
+            alert( "Please provide your Email!" );
+            document.myForm.EMail.focus() ;
+            return false;
+         }
+         if( document.myForm.Zip.value == "" || isNaN( document.myForm.Zip.value ) ||
+            document.myForm.Zip.value.length != 5 ) {
+             alert( "Please provide a zip in the format #####." );
+            document.myForm.Zip.focus() ;
+            return false;
+         }
+         if( document.myForm.Country.value == "-1" ) {
+            alert( "Please provide your country!" );
+            return false;
+         }
+         return( true );
+      }
+
+
+Output:
+
+ 
+
+
+
+
+
+
+
+
+
+10.Design and create a web-page is registration form with validation
+File name: reg.html
+<html>
+<head>
+<title>JavaScript Form Validation using a sample registration form</title>
+<script src="reg.js"></script>
+</head>
+<body bgcolor="pink" onload="document.registration.userid.focus();">
+<h1><center>Registration Form</center></h1><br><br>
+<hr color="red"><center>
+<font size="15" color="blue">Use tab keys to move from one input field to the next.</font><br><br>
+<form name='registration' onSubmit="return formValidation();">
+<label for="userid">User id:</label>
+<input type="text" name="userid" size="12" /><br><br>
+<label for="passid">Password:</label>
+<input type="password" name="passid" size="12" /><br><br>
+<label for="username">Name:</label>
+<input type="text" name="username" size="50" /><br><br>
+<label for="address">Address:</label>
+<input type="text" name="address" size="50" /><br><br>
+<label for="country">Country:</label>
+<select name="country">
+<option selected="" value="Default">(Please select a country)</option>
+<option value="AF">Australia</option>
+<option value="AL">Canada</option>
+<option value="DZ">India</option>
+<option value="AS">Russia</option>
+<option value="AD">USA</option>
+</select><br><br>
+<label for="zip">ZIP Code:</label>
+<input type="text" name="zip" /><br><br>
+<label for="email">Email:</label>
+<input type="text" name="email" size="50" /><br><br>
+<label id="gender">Sex:</label>
+<input type="radio" name="msex" value="Male" /><span>Male</span><br><br>
+<input type="radio" name="fsex" value="Female" /><span>Female</span><br><br>
+<label>Language:</label>
+<input type="checkbox" name="en" value="en"  /><span>English</span><br><br>
+<input type="checkbox" name="nonen" value="noen" /><span>Non English</span><br><br>
+<label for="desc">About:</label>
+<textarea name="desc" id="desc"></textarea><br><br>
+<input type="submit" name="submit" value="Submit" /></center>
+</form>
+</body>
+</html>
+File name: reg.js
+function formValidation()
+{
+var uid = document.registration.userid;
+var passid = document.registration.passid;
+var uname = document.registration.username;
+var uadd = document.registration.address;
+var ucountry = document.registration.country;
+var uzip = document.registration.zip;
+var uemail = document.registration.email;
+var umsex = document.registration.msex;
+var ufsex = document.registration.fsex; if(userid_validation(uid,5,12))
+{
+if(passid_validation(passid,7,12))
+{
+if(allLetter(uname))
+{
+if(alphanumeric(uadd))
+{ 
+if(countryselect(ucountry))
+{
+if(allnumeric(uzip))
+{
+if(ValidateEmail(uemail))
+{
+if(validsex(umsex,ufsex))
+{
+}   } 
+}    } 
+}     }
+}   }
+return false;
+}
+function userid_validation(uid,mx,my)
+{
+var uid_len = uid.value.length;
+if (uid_len == 0 || uid_len >= my || uid_len < mx)
+{
+alert("User Id should not be empty / length be between "+mx+" to "+my);
+uid.focus();
+return false;
+}
+return true;
+}
+function passid_validation(passid,mx,my)
+{
+var passid_len = passid.value.length;
+if (passid_len == 0 ||passid_len >= my || passid_len < mx)
+{
+alert("Password should not be empty / length be between "+mx+" to "+my);
+passid.focus();
+return false;
+}
+return true;
+}
+function allLetter(uname)
+{ 
+var letters = /^[A-Za-z]+$/;
+if(uname.value.match(letters))
+{
+return true;
+}
+else
+{
+alert('Username must have alphabet characters only');
+uname.focus();
+return false;
+}  }
+function alphanumeric(uadd)
+{ 
+var letters = /^[0-9a-zA-Z]+$/;
+if(uadd.value.match(letters))
+{
+return true;
+}
+else
+{
+alert('User address must have alphanumeric characters only');
+uadd.focus();
+return false;
+}    }
+function countryselect(ucountry)
+{
+if(ucountry.value == "Default")
+{
+alert('Select your country from the list');
+ucountry.focus();
+return false;
+}
+else
+{
+return true;
+}    }
+function allnumeric(uzip)
+{ 
+var numbers = /^[0-9]+$/;
+if(uzip.value.match(numbers))
+{
+return true;
+}
+else
+{
+alert('ZIP code must have numeric characters only');
+uzip.focus();
+return false;
+}    }
+function ValidateEmail(uemail)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(uemail.value.match(mailformat))
+{
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+uemail.focus();
+return false;
+}
+} function validsex(umsex,ufsex)
+{
+x=0;
+if(umsex.checked) 
+{
+x++;
+} if(ufsex.checked)
+{
+x++; 
+}
+if(x==0)
+{
+alert('Select Male/Female');
+umsex.focus();
+return false;
+}
+else
+{
+alert('Form Succesfully Submitted');
+window.location.reload()
+return true;
+}   }
+Output:
+
+ 
+
+
+
