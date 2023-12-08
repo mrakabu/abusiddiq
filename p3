@@ -1,0 +1,492 @@
+1. a. ReactJS installation and setup.
+    b. Display a message “Hello world”  in Visual Studio Code ,Online editor 
+               Codepen.io     and  Html format.
+a. ReactJS installation and setup.
+(1).NPM will be installed along with Nodejs. Node.js can be downloaded and installed from the official NodeJs website.
+                         https://nodejs.org
+Once the Installation of Node is complete. Open Node.Js Command Prompt and we can check the version as well.
+                         C:/User>node  -v
+(2). Install Create-React-App Tool
+                        npm install -g create-react-app
+Creating a new react project
+I want to create the project or application in D:\React_Programs. I will create this folder and let our command prompt point to it by using the change directory command.
+                       create-react-app test-project
+Running the React Application
+                     cd test-project
+                    npm start
+ The Project we have created and run it locally on our system using npm start. Launch the browser and visit      http://localhost:3000.
+(3)Install Visual Studio Code
+Download and install Visual Studio Code from the following URL
+                     https://code.visualstudio.com/download
+After the installation, open the Project we have created earlier using the VS Code. The Project has the following 3 folders
+•	Node_modules
+•	Public
+•	src
+In Public folder index.html we have one div tag with id as root.
+                 <div id="root"></div>
+(4). React online editors
+we want to create react project using CodePen. In the browser, navigate to
+                       https://codepen.io and click on Start Coding.
+Create a simple div in HTML section.
+         <div id="root"></div>
+Followed by writing some JavaScript Code :
+     ReactDOM.render(
+                        <h1> Hello world</h1>,
+                  document.getElementById('root')
+              );
+This code will throw an error as we are missing the references to two Javascript files.
+Go to Pen Settings section of Js and add,
+                    https://unpkg.com/react/umd/react.development.js
+                        https://unpkg.com/react-dom/umd/react-dom.development.js
+React Directly in HTML
+React is to write React directly in your HTML files. Start by including three scripts, the first two let us write React code in our JavaScripts, and the third, Babel, allows us to write JSX syntax 
+
+<html>
+  <head>
+ <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"> </script>
+  </head>
+  <body>
+    <div id="mydiv"></div>
+    <script type="text/babel">
+      function Hello() {
+        return <h1>Hello World!</h1>;
+      }
+      ReactDOM.render(<Hello />, document.getElementById('mydiv'))
+    </script>
+  </body>
+</html>
+
+
+Output:
+
+
+
+
+
+
+Signature of Student                                                               Signature of Faculty
+
+2.Write a ReactJS  program using in (1)React Element.(2)React Element using CreateElement Method.
+1)
+    const element = (
+        <div>
+      <h1>Welcome to React Programming World</h1>
+      <h2>Understanding React Rendering…</h2>
+    </div>
+        );
+           ReactDOM.render(element, document.getElementById('root'));
+
+Output:
+
+
+
+
+2)
+    const element=React.createElement("div",{className:"testClass"},
+            React.createElement("h1",null,'Welcome to Pragim Technologies'),
+                       React.createElement('h2',null,'I am from h2 Tag'));
+    ReactDOM.render(element,document.getElementById("root"));
+
+Output:
+
+
+
+Signature of Student                                                               Signature of Faculty
+
+3.Write a ReactJS  program using in Function method /(Component)in React
+ 1)Using One Component. 2) Using two Components.
+
+1)Using One Component:-
+function Employee(data) {
+  return <div><p>Name : {data.name}</p>
+    <p>Salary : {data.salary}</p></div>;
+    }
+   const element = <Employee name="Sara" salary="12345" />;
+  ReactDOM.render(element,  document.getElementById('root'));
+
+
+Output:-
+
+
+
+
+
+
+2) Using two Components.
+
+const Employee=(data)=> {
+  return (<div><p>Name : {data.name}</p>
+    <p>Salary : {data.salary}</p>
+  <Department dept={data.dept} head={data.head}/>
+  </div>);
+  }
+ const Department=(deptInfo)=>{
+  return <div><p>Dept Name is : <b>{deptInfo.dept}</b></p>
+    <p>Dept Head is : <b>{deptInfo.head}</b></p>
+    </div>;
+}
+const element = <Employee name="Sara" salary="12345" dept="Test" 
+                 head="Head" />;
+ReactDOM.render(element,  document.getElementById('root'));
+
+Output:
+
+
+
+
+
+
+
+
+
+Signature of Student                                                               Signature of Faculty
+
+
+
+
+
+
+
+
+4.Write a ReactJS  program using in ClassComponent in React
+ 1)Using One Class-Component. 2) Using twoClass- Components.
+
+1)Using One Class-Component
+class Employee extends React.Component {
+      render(){
+    return <div>
+      <h2>Employee Details...</h2>
+      <p>
+        <label>Name : <b>{this.props.Name}</b></label>
+      </p>
+      </div>;
+    }
+  } 
+   const element=<Employee Name="Prakesh"/>
+  ReactDOM.render(element,document.getElementById("root"));
+
+Output:
+
+
+
+
+
+2) Using two Class- Components.
+class Employee extends React.Component {
+  render(){
+    return <div>
+      <h2>Employee Details...</h2>
+      <p>   <label>Name : <b>{this.props.Name}</b></label>
+      </p>
+      <Department Name={this.props.DeptName}/>
+      </div>;
+  }
+}
+ class Department extends React.Component {
+  render(){
+    return <div>
+      <h2>Department Details...</h2>
+      <p>  <label>Name : <b>{this.props.Name}</b></label>
+      </p>
+      </div>;
+  }
+}
+const element=<Employee Name="Prakash" DeptName="CSE"/>
+ReactDOM.render(element,document.getElementById("root"));
+Output:-
+
+
+Signature of Student                                                               Signature of Faculty
+
+5. (1).Write a ReactJS  program to how many times the button is being Clicked. Lets create a counter  variable and initialize with zero. In AddEmployee function, using state component.
+
+class Employee extends React.Component {
+ count=0;
+    addEmployee = () => {
+        this.count=this.count+1;
+        alert(this.count);
+        alert('Clicked on addEmployee Method');
+    } 
+render() {
+      return <div>
+          <h2>Employee Component...</h2>
+          <button onClick={this.addEmployee}>Add Employee</button>
+      </div>
+    }
+  }
+  const element1=<Employee></Employee>
+  ReactDOM.render(element1,document.getElementById("root"));
+Output:
+ 
+ 
+(2).Write a ReactJS  program to count the  Characters  using State in ClassComponent in React.
+class Employee extends React.Component {
+    state={count:0};
+    addEmployee = () => {
+        this.setState({counter:this.state.counter+1});
+    }
+    render() {
+      return <div>
+          <h2>Employee Component...</h2>
+          <button onClick={this.addEmployee}>Add Employee</button>  
+          <p>   <label>Add Employee Button is Clicked : <b>{this.state.count}</b></label></p>        
+      </div>
+    }
+  }
+class CountCharacters extends React.Component{
+    constructor(props){
+        super(props);
+        this.state={
+            message:'',
+            counter:10
+        };
+    }
+    onMessageChange(text){
+        this.setState({
+            message:'Message has '+text.length+' number of Characters'
+        });
+    }
+    render(){
+        return <div>
+            <h2>Welcome to Count Characters Component...</h2>
+            <p>   <label>Enter Message : <input type="text" 
+                            onChange={e=>this.onMessageChange(e.target.value)}></input></label>
+            </p>
+            <p>   <label>{this.state.message}</label>      </p>
+            <p>   <label>{this.state.counter}</label>      </p>
+        </div>
+    }
+}
+const element=<CountCharacters></CountCharacters>
+ReactDOM.render(element,document.getElementById("root"));
+
+Output:
+
+
+ 
+Signature of Student                                                               Signature of Faculty
+
+
+7. Write a ReactJS  program to Interaction between Components in React and how to pass the data from Parent to Child and child to parent components
+    (1)In this communication data passing  from parents to child’s.
+    (2).In this communication data passing from child to parent.
+
+    (1)In this communication data passing  from parents to child’s.
+Employee is the Parent and Salary Component is the Child. Parent Component is passing the Data to Child Components through properties.
+class Employee extends React.Component{
+  constructor(props){
+    super(props);
+  }  
+  render(){
+    return <div>
+      <h1>Employee Component...</h1>
+    <p>    <label>Id : <b>{this.props.Id}</b></label>     </p>
+      <p>    <label>Name : <b>{this.props.Name}</b></label>     </p>
+      <p>    <label>Location : <b>{this.props.Location}</b></label>     </p>
+      <p>   <label>Total Salary : <b>{this.props.Salary}</b></label>     </p>
+<Salary BasicSalary={this.props.BasicSalary} HRA={this.props.HRA} 
+ SpecialAllowance={this.props.SpecialAllowance}></Salary>
+      </div>
+  }
+}
+class Salary extends React.Component{
+  constructor(props){
+    super(props);
+  }
+  render(){
+    return <div>
+      <h1>Salary Details...</h1>
+<p> <label>Basic Salary : <b>{this.props.BasicSalary}</b></label>   </p>
+<p>  <label>HRA : <b>{this.props.HRA}</b></label>  </p>
+    <p>   <label>Special Allowance : <b>{this.props.SpecialAllowance}</b></label>
+    </p>
+      </div>
+  }
+}
+const element=<Employee Id="101" Name="Pragim" Location="Bangalore" Salary="50000" 
+BasicSalary="25000" HRA="10000" SpecialAllowance="15000"></Employee>  
+  ReactDOM.render(element,document.getElementById("root"));
+Output:
+ 
+
+    (2).In this communication data passing from child to parent.
+class Employee extends React.Component{
+  constructor(props){
+    super(props);
+    this.state={updatedSalary:null};
+  }  
+  getUpdatedSalary = (salary) => {
+this.setState({updatedSalary:salary});
+}
+  render(){
+    return <div>
+  <h1>Employee Component...</h1>
+ <p> <label>Id : <b>{this.props.Id}</b></label>  </p>
+<p> <label>Name : <b>{this.props.Name}</b></label>   </p>
+ <p> <label>Location : <b>{this.props.Location}</b></label>     </p>
+  <p> <label>Total Salary : <b>{this.props.Salary}</b></label>     </p>
+ <p> <label>Updated Salary : <b>{this.state.updatedSalary}</b></label>
+</p>
+<Salary BasicSalary={this.props.BasicSalary} HRA={this.props.HRA} SpecialAllowance={this.props.SpecialAllowance} onSalaryChanged={this. getUpdatedSalary }></Salary>     
+        </div>
+  }
+}
+class Salary extends React.Component{
+ constructor(props){
+    super(props);
+    this.state={
+      basic:this.props.BasicSalary,
+      hra:this.props.HRA,
+      sa:this.props.SpecialAllowance
+    };
+ }
+ updateSalary=()=>{
+let salary=parseInt(this.refs.BasicSalary.value)+parseInt(this.refs.HRA.value)+        parseInt(this.refs.SpecialAllowance.value);
+this.props.onSalaryChanged(salary);
+ } 
+  render(){
+    return <div>
+      <h1>Salary Details...</h1>
+   <p>
+ <label>Basic Salary :<input type="text" ref="basic"  defaultValue={this.state.basic} ref="BasicSalary"/></label>  </p>
+<p> <label>HRA : <input type="text"  ref="hra" defaultValue={this.state.hra} ref="HRA"/></label>     </p>
+ <p> <label>Special Allowance : <input type="text" ref="sa" defaultValue={this.state.sa} ref="SpecialAllowance"/></label>     </p>   
+<button onClick={this.updateSalary}>Update</button>      
+         </div>
+  }
+}
+const element=<Employee Id="101" Name="Pragim" Location="Bangalore" Salary="50000"  BasicSalary="25000" HRA="10000" SpecialAllowance="15000"></Employee>  
+  ReactDOM.render(element,document.getElementById("root"));
+
+Output:
+ 
+ 
+
+Signature of Student                                                               Signature of Faculty
+
+Login form
+import React from 'react';
+import ReactDom from 'react-dom';
+const Login=()=>{
+  return(
+    <div>
+      <form action=""> 
+        <div> 
+          <label htmlFor="email">Email</label>
+          <input type="text" name="email" id="email"/> 
+        </div> 
+        <div> 
+          <label htmlFor="passw">Password</label>
+          <input type="text" name="passw" id="passw"/> 
+        </div>  
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  )
+}
+
+export default Login  
+output:
+ 
+
+Login with validaton
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
+
+//import "./styles.css";
+
+function App() {
+  // React States
+  const [errorMessages, setErrorMessages] = useState({});
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  // User Login info
+  const database = [
+    {
+      username: "user1",
+      password: "pass1"
+    },
+    {
+      username: "user2",
+      password: "pass2"
+    }
+  ];
+
+  const errors = {
+    uname: "invalid username",
+    pass: "invalid password"
+  };
+
+  const handleSubmit = (event) => {
+    //Prevent page reload
+    event.preventDefault();
+
+    var { uname, pass } = document.forms[0];
+
+    // Find user login info
+    const userData = database.find((user) => user.username === uname.value);
+
+    // Compare user info
+    if (userData) {
+      if (userData.password !== pass.value) {
+        // Invalid password
+        setErrorMessages({ name: "pass", message: errors.pass });
+      } else {
+        setIsSubmitted(true);
+      }
+    } else {
+      // Username not found
+      setErrorMessages({ name: "uname", message: errors.uname });
+    }
+  };
+
+  // Generate JSX code for error message
+  const renderErrorMessage = (name) =>
+    name === errorMessages.name && (
+      <div className="error">{errorMessages.message}</div>
+    );
+
+  // JSX code for login form
+  const renderForm = (
+    <div className="form">
+      <form onSubmit={handleSubmit}>
+        <div className="input-container">
+          <label>Username </label>
+          <input type="text" name="uname" required />
+          {renderErrorMessage("uname")}
+        </div>
+        <div className="input-container">
+          <label>Password </label>
+          <input type="password" name="pass" required />
+          {renderErrorMessage("pass")}
+        </div>
+        <div className="button-container">
+          <input type="submit" />
+        </div>
+      </form>
+    </div>
+  );
+
+  return (
+    <div className="app">
+      <div className="login-form">
+        <div className="title">Sign In</div>
+        {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
+      </div>
+    </div>
+  );
+}
+
+export default App;
+output
+ 
+User1
+Pass1
+ 
+ 
+User1
+Pass3
+ 
+
