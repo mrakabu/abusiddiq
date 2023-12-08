@@ -1,0 +1,231 @@
+Full Stack Lab-Programming
+How to install node.js and working with typescript
+The TypeScript Compiler
+The Typescript compiler is itself a .ts file compiled down to JavaScript (.js) file. The TSC (TypeScript Compiler) is a source-to-source compiler (transcompiler / transpiler).
+ 
+The TSC generates a JavaScript version of the .ts file passed to it. In other words, the TSC produces an equivalent JavaScript source code from the Typescript file given as an input to it. This process is termed as transpilation.
+Installing Node.js
+Node.js is an open source, cross-platform runtime environment for server-side JavaScript. Node.js is required to run JavaScript without a browser support. It uses Google V8 JavaScript engine to execute code. You may download Node.js source code or a pre-built installer for your platform. Node is available here − https://nodejs.org/en/download
+Installation on Windows
+Follow the steps given below to install Node.js in Windows environment.
+Step 1 − Download and run the .msi installer for Node.
+ 
+
+Step 2 − To verify if the installation was successful, enter the command node –v in the terminal window.
+ 
+Step 3 − Type the following command in the terminal window to install TypeScript.
+npm  install -g  typescript
+
+ 
+Compile and Execute a TypeScript Program
+Let us see how to compile and execute a TypeScript program using Visual Studio Code/notepad. Follow the steps given below −
+Step 1 − Save the file with .ts extension. We shall save the file as Test.ts. The code editor marks errors in the code, if any, while you save it.
+Step 2 − Right-click the TypeScript file under the Working Files option in VS Code’s Explore Pane. Select Open in Command Prompt option.
+ 
+
+Step 3 - First, create the ts config file:
+               npx tsc   - -init
+
+ 
+
+You should now have a tsconfig.json file in the project root.
+
+Step 4 − To compile the file use the following command on the terminal window.
+                       tsc Test.ts
+Step 5 − The file is compiled to Test.js. To run the program written, type the following in the terminal.
+                                  node Test.js
+step-6 – The final result display.
+
+
+1. Write program in Typescripts  to Convert the given numbers(Decimal,Hexa-decimal,Otal and binary numbers)
+
+let first:number=123;
+let second:number=0x37CF;
+let third:number=0o25;
+let fourth:number=0b1111;
+console.log(first);
+console.log(second);
+console.log(third);
+console.log(fourth);
+
+output:
+ 
+
+
+
+Signature of Student                                                               Signature of Faculty
+
+
+
+
+
+
+
+
+2. Write program in Typescripts using number methods. 
+let mynum:number=12345678;
+let mynum1:number=10.87654;
+let mynum2:number=10667.987;
+mynum2.toLocaleString();
+mynum1.toFixed();
+mynum1.toFixed(1);
+mynum1.toPrecision();
+mynum1.toPrecision(1); 
+mynum.toExponential();
+mynum.toExponential(1);
+console.log("the input num is:",+mynum);
+console.log(mynum.toExponential());
+console.log(mynum.toExponential(1));
+console.log("the input number is :",+mynum1);
+console.log(mynum1.toFixed());
+console.log(mynum1.toFixed(1));
+console.log("the input number is",+mynum2);
+console.log(mynum2.toLocaleString());
+console.log("my number is input is" ,+mynum1);
+console.log(mynum1.toPrecision());
+console.log(mynum1.toPrecision(1));
+output:
+ 
+Signature of Student                                                               Signature of Faculty
+3. Write program in Typescripts  to find the sum of series of a given numbers.
+
+   function addNumbers() {
+   var nums = [];
+   for  (var  n = 0;  n < arguments.length;  n++)  {
+      nums[n - 0] = arguments[n];
+   }
+   var i;
+   var sum = 0;
+   for (i = 0;  i < nums.length;  i++)  {
+      sum = sum + nums[i];
+   }
+   console.log("sum of the numbers", sum);
+}
+addNumbers(1, 2, 3,4);
+addNumbers(10, 30, 20, 60, 35);
+
+output:
+ 
+
+
+
+Signature of Student                                                               Signature of Faculty
+ 
+
+
+
+
+4. Write program in Typescripts  to find the Factorial  of a given numbers.
+
+     function factorial(number) {
+               if (number <= 0) {         
+         return 1; 
+         } else {     
+            return (number * factorial(number - 1));     
+          } 
+       }; 
+     console.log(factorial(6));  
+
+output:     
+ 
+
+
+
+Signature of Student                                                               Signature of Faculty
+
+
+
+
+
+
+
+
+
+5. Write program in Typescripts to generate the even number between 0 to 100 and count the even values.
+var num = 0;
+var count = 0;
+for (num = 0; num <= 50; num++) {
+   if (num % 2 == 0) {
+console.log("the odd values between 0 to 50 is:" + num);
+      continue;
+   }
+   count++;
+}
+console.log(" The count of odd values between 0 and 20 is: " + count);  
+
+output:
+ 
+
+Signature of Student                                                               Signature of Faculty
+
+6. Write program in Typescripts using String  methods. 
+let str1:string="Hello hmspt";
+let str2:string="TUMKUR";
+str1.charAt(0);
+str1.charAt(5);
+str1.conCat(str2);
+str1.toUpperCase();
+str2.toLowerCase();
+str2.indexOf(0);
+str2.indexOf(4);
+console.log("the input string is:",+str1);
+console.log(str1.charAt(0));
+console.log(str1.charAt(0));
+console.log(str1.conCat(str2));
+console.log(str1.toUpperCase());
+console.log(str2.toLowerCase());
+console.log(str2.indexOf(0));
+console.log(str2.indexOf(4));
+output:
+ 
+
+
+Signature of Student                                                               Signature of Faculty
+
+
+7. Write program in Typescripts In the array-element is adding (push) and deleting (Pop) elements and sorting using array method.
+let fruits:array<string>;
+fruits=['apple','orange','banana'];
+console.log(fruits);
+fruits.push('papaya');
+fruits.push('mango');
+console.log(fruits);
+fruits.pop();
+console.log(fruits);
+fruits.sort();
+console.log(fruits);
+
+output:
+ 
+
+
+
+Signature of Student                                                               Signature of Faculty
+
+
+
+
+
+
+
+
+8. Write program in Typescripts In the array-element is adding (push) and deleting (Pop) elements and sorting using tuple method.
+
+var employee:[number,string[] ];
+employee=[[1,"steve"],[2,"bill"],[3,"jeff"]];
+console.log(employee);
+employee.push([5,"gate"]);
+employee.push([4,"door"]);
+console.log(employee);
+employee.pop();
+console.log(employee);
+employee.sort();
+console.log(employee);
+
+output:
+
+ 
+
+
+Signature of Student                                                               Signature of Faculty
+
